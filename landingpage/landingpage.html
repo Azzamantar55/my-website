@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خدمتك تهمنا</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to left, #7f5af0, #2cb67d);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 36px;
+    }
+    header p {
+      font-size: 18px;
+    }
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #fff;
+      color: #2cb67d;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section h2 {
+      color: #7f5af0;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .service-box {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .service-box span {
+      font-size: 30px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .pricing-card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+      text-align: center;
+    }
+    .pricing-card h3 {
+      margin-bottom: 10px;
+      color: #2cb67d;
+    }
+    .pricing-card p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .pricing-card .price {
+      font-size: 24px;
+      font-weight: bold;
+      color: #7f5af0;
+    }
+    .testimonials blockquote {
+      background-color: #e0eaff;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .gallery-link {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+  }
+  .gallery-item {
+    position: relative;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .gallery-item p {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    margin: 0;
+    background-color: #f1f1f1;
+    color: #2cb67d;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    font-weight: bold;
+    font-size: 18px;
+    transition: opacity 0.3s ease;
+  }
+  .gallery-item:hover .overlay {
+    opacity: 1;
+  }
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .testimonial-card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+  .testimonial-card p {
+    font-style: italic;
+    color: #555;
+  }
+  .testimonial-card h4 {
+    margin-top: 15px;
+    color: #2cb67d;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #fff;
+    }
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .buttons a {
+      background-color: #2cb67d;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ابدأ نجاحك الرقمي من هنا 🚀</h1>
+    <p>خدمات احترافية تساعدك على الظهور، التميز، والإقناع – من كتابة المحتوى حتى التصميم الإبداعي.</p>
+    <a href="#contact" class="cta-button">اطلب الآن</a>
+  </header>
+
+  <section>
+    <h2>من نحن</h2>
+    <p>نحن فريق متخصص في صناعة المحتوى والتصميم، نساعد الأفراد وروّاد الأعمال وأصحاب المشاريع على بناء هوية رقمية قوية ومؤثرة. نمزج بين الإبداع والخبرة لنمنحك خدمات متكاملة تسهّل عليك الوصول إلى جمهورك وتزيد من مبيعاتك.</p>
+  </section>
+
+  <section class="services">
+    <h2>خدماتنا</h2>
+    <div class="services-grid">
+      <div class="service-box">
+        <span>✍️</span>
+        كتابة مقالات ومدونات (SEO Friendly)
+      </div>
+      <div class="service-box">
+        <span>📝</span>
+        كتابة الإعلانات والتسويق (Copywriting)
+      </div>
+      <div class="service-box">
+        <span>🎨</span>
+        تصميم الشعارات (Logos)
+      </div>
+      <div class="service-box">
+        <span>📄</span>
+        تصميم السير الذاتية بجميع أنواعها
+      </div>
+      <div class="service-box">
+        <span>💻</span>
+        تصميم صفحات الهبوط (Landing Pages)
+      </div>
+      <div class="service-box">
+        <span>📚</span>
+        تصميم أغلفة الكتب الإلكترونية أو ملفات PDF
+      </div>
+      <div class="service-box">
+        <span>📊</span>
+        إعداد عروض تقديمية (PowerPoint / Canva)
+      </div>
+      <div class="service-box">
+        <span>🧩</span>
+        تصميم أوراق عمل أو كويزات
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>الأسعار</h2>
+    <div class="pricing">
+      <div class="pricing-card">
+        <h3>كتابة مقالة SEO</h3>
+        <p>مقال احترافي 750-2500 كلمة</p>
+        <div class="price">3$</div>
+      </div>
+      <div class="pricing-card">
+        <h3>كتابة إعلان تسويقي</h3>
+        <p>نص إعلاني احترافي مخصص للحملات</p>
+        <div class="price">5$</div>
+      </div>
+      <div class="pricing-card">
+        <h3>تصميم شعار</h3>
+        <p>شعار مميز + ملفات PNG & SVG</p>
+        <div class="price">7.5$</div>
+      </div>
+      <div class="pricing-card">
+        <h3>تصميم سيرة ذاتية</h3>
+        <p>حسب نوع الوظيفة + ملف PDF جاهز للطباعة</p>
+        <div class="price">8$</div>
+      </div>
+      <div class="pricing-card">
+        <h3>تصميم صفحة هبوط</h3>
+        <p>Landing Page HTML/CSS متجاوبة</p>
+        <div class="price">35$</div>
+      </div>
+      <div class="pricing-card">
+        <h3>تصميم غلاف كتاب إلكتروني</h3>
+        <p>تصميم جذاب احترافي لأعمالك الرقمية</p>
+        <div class="price">7$</div>
+      </div>
+      <div class="pricing-card">
+        <h3>عرض تقديمي</h3>
+        <p>10 شرائح مصممة على PowerPoint أو Canva</p>
+        <div class="price">6$</div>
+      </div>
+      <div class="pricing-card">
+        <h3>تصميم أوراق عمل</h3>
+        <p>أنشطة تعليمية أو كويزات PDF</p>
+        <div class="price">8$</div>
+      </div>
+    </div>
+  </section>
+ <section>
+  <h2>معرض أعمالنا</h2>
+  <div class="gallery-grid">
+    <a href="works/articles.html" class="gallery-link">
+      <div class="gallery-item">
+        <img src="makalet.png" alt="مقالات ومدونات">
+        <div class="overlay">اضغط لترى أعمالنا</div>
+        <p>كتابة مقالات ومدونات</p>
+      </div>
+    </a>
+    <a href="works/copywriting.html" class="gallery-link">
+      <div class="gallery-item">
+        <img src="e3leenet.png" alt="كتابة إعلانات">
+        <div class="overlay">اضغط لترى أعمالنا</div>
+        <p>كتابة الإعلانات والتسويق</p>
+      </div>
+    </a>
+    <a href="works/logos.html" class="gallery-link">
+      <div class="gallery-item">
+        <img src="chi3aarat.png" alt="تصميم شعارات">
+        <div class="overlay">اضغط لترى أعمالنا</div>
+        <p>تصميم الشعارات</p>
+      </div>
+    </a>
+    <a href="works/cv.html" class="gallery-link">
+      <div class="gallery-item">
+        <img src="Cv.png" alt="تصميم السير الذاتية">
+        <div class="overlay">اضغط لترى أعمالنا</div>
+        <p>تصميم السير الذاتية</p>
+      </div>
+    </a>
+    <a href="works/landing-pages.html" class="gallery-link">
+      <div class="gallery-item">
+        <img src="landingpage1.jpg" alt="تصميم صفحات الهبوط">
+        <div class="overlay">اضغط لترى أعمالنا</div>
+        <p>تصميم صفحات الهبوط</p>
+      </div>
+    </a>
+    
+      </div>
+    </a>
+  </div>
+</section>
+
+
+
+  <section class="testimonials">
+  <h2>ماذا يقول عملاؤنا؟</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <p>"خدمة كتابة المقالات كانت رائعة! المقال مكتوب بلغة جذابة ومتوافق تمامًا مع SEO، مما ساعد موقعي في الظهور بصفحات البحث الأولى."</p>
+      <h4>أحمد علي - صاحب مدونة تقنية</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>"أبدعتم في تصميم صفحة الهبوط الخاصة بمنتجي، لاحظت ارتفاع كبير في معدل التحويل خلال أسبوع فقط من إطلاقها."</p>
+      <h4>ليلى منصور - صاحبة متجر إلكتروني</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>"طلبت تصميم سيرة ذاتية مهنية، وكانت النتيجة أكثر من ممتازة، حصلت على مقابلة عمل خلال أيام بفضل العرض الاحترافي لسيرتي الذاتية."</p>
+      <h4>خالد بدر - باحث عن عمل</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>"فريق مبدع ومحترف! طلبت منهم عرض تقديمي لعرض فكرة مشروعي أمام مستثمرين، والانطباع كان رائعًا."</p>
+      <h4>نورا دياب - رائدة أعمال</h4>
+    </div>
+  </div>
+</section>
+
+  <section>
+    <h2>لماذا نحن؟</h2>
+    <ul>
+      <li>✅ دقة في المواعيد</li>
+      <li>✅ دعم دائم ومرونة في التواصل</li>
+      <li>✅ جودة تضاهي الوكالات الكبرى بأسعار مناسبة</li>
+      <li>✅ أفكار إبداعية ونتائج قابلة للقياس</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>هل أنت جاهز للانطلاق؟</h2>
+ 
+    <div class="buttons">
+      
+      <a href="https://wa.me/96181127925" target="_blank">تواصل على واتساب</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 جميع الحقوق محفوظة - شركتك للخدمات الرقمية
+  </footer>
+
+</body>
+</html>
